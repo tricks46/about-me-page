@@ -78,7 +78,29 @@
             document.body.appendChild(script);
         }, 2000);
         </script>
-        
+  <hr>
+<div style="text-align:center; margin-top: 40px;">
+  <h3>Submit Your Flag</h3>
+  <input type="text" id="flagInput" placeholder="Enter your flag here" style="padding: 8px; width: 300px;">
+  <button onclick="checkFlag()" style="padding: 8px;">Submit</button>
+  <p id="resultMessage" style="font-weight: bold; margin-top: 10px;"></p>
+</div>
+
+<script>
+  function checkFlag() {
+    const correctFlag = "itc101{financebro2025}";
+    const userFlag = document.getElementById("flagInput").value.trim();
+    const message = document.getElementById("resultMessage");
+
+    if (userFlag === correctFlag) {
+      message.style.color = "green";
+      message.textContent = "🎉 Correct! Congratulations!";
+    } else {
+      message.style.color = "red";
+      message.textContent = "❌ Incorrect. Try again!";
+    }
+  }
+</script>      
 </body>
 </html>    
 </body>
